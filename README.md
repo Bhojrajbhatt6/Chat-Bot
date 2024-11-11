@@ -4,7 +4,7 @@ This project implements a chatbot using LangChain and Google Gemini Pro, enablin
 
 Features:
 1. **PDF Querying:** Allows users to upload PDF files and ask questions based on the content of the document.
-2. 	**Call me  Request:**Users can request a call back by providing their name, phone number, and email.
+2. 	**Call me  Request:** Users can request a call back by providing their name, phone number, and email.
 3. 	**Appointment Booking:** Users can schedule an appointment by selecting a date
 4. 	**Date Recognition:** Recognizes and validates appointment dates in the YYYY-MM-DD format
 
