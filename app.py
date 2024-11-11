@@ -63,7 +63,7 @@ def user_input(user_question):
     response = chain({"input_documents": docs, "question": user_question}, return_only_outputs=True)
     st.write("Reply: ", response["output_text"])
 
-# Function to handle the appointment form and validation
+#  handle the appointment form
 def call_me():
     name = st.text_input("Enter your Name", key="name_input")
     phone = st.text_input("Enter your Phone Number", key="phone_input")
@@ -77,7 +77,7 @@ def call_me():
         else:
             st.success(f"Thank you, {name}. We will call you at {phone}")
 
-# Function to handle the appointment scheduling form and validation
+# handle the appointment scheduling form
 def book_appointment():
     appointment_date = st.date_input("Enter your Appointment Date (YYYY-MM-DD)", key="appointment_date_input")
     submit_button = st.button("Confirm Appointment", key="submit_appointment_button")
@@ -114,7 +114,7 @@ def main():
             # Else, handle the document-based question
             user_input(user_question)
 
-    # "Book Appointment" button
+    # "Book Appointment"
     st.header("Book Your Appointment")
     book_appointment()
 
