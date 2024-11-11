@@ -83,14 +83,14 @@ def call_me():
         st.session_state.phone = ""
         st.session_state.email = ""
 
-    # Step 0: Ask for name
+    #  Ask for name
     if st.session_state.call_me_step == 0:
         st.write("Hello! What's your name?")
         st.session_state.name = st.text_input("Your name", key="call_name_input")
         if st.session_state.name:
             st.session_state.call_me_step = 1
 
-    # Step 1: Ask for phone number
+    #  Ask for phone number
     elif st.session_state.call_me_step == 1:
         st.write(f"Nice to meet you, {st.session_state.name}! What is your phone number?")
         st.session_state.phone = st.text_input("Phone number", key="call_phone_input")
@@ -99,7 +99,7 @@ def call_me():
         elif st.session_state.phone:
             st.warning("Please enter a valid phone number.")
 
-    # Step 2: Ask for email
+    #  Ask for email
     elif st.session_state.call_me_step == 2:
         st.write(f"Thanks! Now, please provide your email address.")
         st.session_state.email = st.text_input("Email", key="call_email_input")
@@ -108,7 +108,7 @@ def call_me():
         elif st.session_state.email:
             st.warning("Please enter a valid email address.")
 
-    # Step 3: Confirmation
+    #  Confirmation
     elif st.session_state.call_me_step == 3:
         st.write(f"Thank you, {st.session_state.name}! We will call you at {st.session_state.phone} soon.")
         if st.button("Confirm Call"):
@@ -122,14 +122,14 @@ def book_appointment():
         st.session_state.phone = ""
         st.session_state.appointment_date = ""
 
-    # Step 0: Ask for name
+    # Ask for name
     if st.session_state.book_appointment_step == 0:
         st.write("Hello! What's your name?")
         st.session_state.name = st.text_input("Your name", key="book_name_input")
         if st.session_state.name:
             st.session_state.book_appointment_step = 1
 
-    # Step 1: Ask for phone number
+    #  Ask for phone number
     elif st.session_state.book_appointment_step == 1:
         st.write(f"Nice to meet you, {st.session_state.name}! What is your phone number?")
         st.session_state.phone = st.text_input("Phone number", key="book_phone_input")
@@ -138,7 +138,7 @@ def book_appointment():
         elif st.session_state.phone:
             st.warning("Please enter a valid phone number.")
 
-    # Step 2: Ask for appointment date
+    # Ask for appointment date
     elif st.session_state.book_appointment_step == 2:
         st.write("Great! When would you like to book the appointment? (e.g., 'Next Monday')")
         appointment_input = st.text_input("Appointment Date", key="book_date_input")
@@ -150,7 +150,7 @@ def book_appointment():
             else:
                 st.warning("Please enter a valid date.")
 
-    # Step 3: Confirmation
+    # Confirmation
     elif st.session_state.book_appointment_step == 3:
         st.write(f"Thank you, {st.session_state.name}! Your appointment is booked for {st.session_state.appointment_date}.")
         if st.button("Confirm Appointment"):
